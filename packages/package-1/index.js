@@ -1,1 +1,1 @@
-console.log('index-package-1');
+console.log('index-package-1 updated v3');

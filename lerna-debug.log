@@ -5,17 +5,131 @@
 4 silly isInitialized
 5 silly isInitialized true
 6 silly existsSync D:\projects\lerna-repo\VERSION
-7 silly initialize attempt
-8 info current version 0.0.0
+7 info versioning independent
+8 silly initialize attempt
 9 silly isDetachedHead
 10 silly getCurrentBranch
-11 error initialize caught error
-12 error Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-12 error Use '--' to separate paths from revisions, like this:
-12 error 'git <command> [<revision>...] -- [<file>...]'
-12 error
-12 error     at Function.module.exports.sync (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:303:26)
-12 error     at Function.execSync (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\lib\ChildProcessUtilities.js:59:30)
-12 error     at Function.getCurrentBranch (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\lib\GitUtilities.js:202:59)
-12 error     at Function.isDetachedHead (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\lib\GitUtilities.js:45:37)
-12 error     at PublishCommand.initialize (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\lib\commands\PublishCommand.js:260:36)
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag package-1@1.0.2
+21 info Comparing with package-1@1.0.2.
+22 silly diffSinceIn package-1@1.0.2 packages/package-1
+23 silly diff packages/package-1/index.js
+24 silly diffSinceIn package-1@1.0.2 packages/package-2
+25 silly diff
+26 silly diffSinceIn package-1@1.0.2 packages/package-3
+27 silly diff
+28 verbose updated package-1
+29 info Checking for prereleased packages...
+30 silly collectDependents
+31 silly isPackageDependentOf package-1 package-1
+32 silly isPackageDependentOf package-2 package-1
+33 silly isPackageDependentOf package-3 package-1
+34 silly collectUpdates
+35 verbose has filtered update package-1
+36 silly initialize success
+37 silly execute attempt
+38 silly runScriptSync preversion undefined
+39 silly runScriptSync preversion package-1
+40 silly runScriptSync version package-1
+41 silly runScriptSync version undefined
+42 silly addFile D:\projects\lerna-repo\packages\package-1\package.json
+43 silly commit Publish
+43 silly commit
+43 silly commit  - package-1@1.0.3
+44 verbose commit [ 'commit',
+44 verbose commit   '--no-verify',
+44 verbose commit   '-F',
+44 verbose commit   'C:\\Users\\adas27\\AppData\\Local\\Temp\\f2b6a839-80e4-49d8-b6a3-3d37492e0383\\lerna-commit.txt' ]
+45 silly addTag package-1@1.0.3
+46 silly runScriptSync postversion package-1
+47 silly runScriptSync postversion undefined
+48 info publish Publishing packages to npm...
+49 silly existsSync D:\projects\lerna-repo\packages\package-1\scripts\prepublish.js
+50 verbose execScript No prepublish script found at D:\projects\lerna-repo\packages\package-1\scripts\prepublish.js
+51 verbose publishing package-1
+52 silly publishTaggedInDir latest package-1
+53 silly getExecOpts { cwd: 'D:\\projects\\lerna-repo\\packages\\package-1' }
+54 error publish Retrying failed publish: package-1
+55 verbose publish error undefined
+56 verbose publishing package-1
+57 silly publishTaggedInDir latest package-1
+58 silly getExecOpts { cwd: 'D:\\projects\\lerna-repo\\packages\\package-1' }
+59 error publish Retrying failed publish: package-1
+60 verbose publish error undefined
+61 verbose publishing package-1
+62 silly publishTaggedInDir latest package-1
+63 silly getExecOpts { cwd: 'D:\\projects\\lerna-repo\\packages\\package-1' }
+64 error publish Retrying failed publish: package-1
+65 verbose publish error undefined
+66 verbose publishing package-1
+67 silly publishTaggedInDir latest package-1
+68 silly getExecOpts { cwd: 'D:\\projects\\lerna-repo\\packages\\package-1' }
+69 error publish Retrying failed publish: package-1
+70 verbose publish error undefined
+71 verbose publishing package-1
+72 silly publishTaggedInDir latest package-1
+73 silly getExecOpts { cwd: 'D:\\projects\\lerna-repo\\packages\\package-1' }
+74 error publish Ran out of retries while publishing package-1 Error: Command failed: npm publish --tag latest
+74 error publish npm ERR! path C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz
+74 error publish npm ERR! code EPERM
+74 error publish npm ERR! errno -4048
+74 error publish npm ERR! syscall unlink
+74 error publish npm ERR! Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+74 error publish npm ERR!  { Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+74 error publish npm ERR!   cause:
+74 error publish npm ERR!    { Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+74 error publish npm ERR!      errno: -4048,
+74 error publish npm ERR!      code: 'EPERM',
+74 error publish npm ERR!      syscall: 'unlink',
+74 error publish npm ERR!      path: 'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz' },
+74 error publish npm ERR!   isOperational: true,
+74 error publish npm ERR!   stack: 'Error: EPERM: operation not permitted, unlink \'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz\'',
+74 error publish npm ERR!   errno: -4048,
+74 error publish npm ERR!   code: 'EPERM',
+74 error publish npm ERR!   syscall: 'unlink',
+74 error publish npm ERR!   path: 'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz' }
+74 error publish npm ERR!
+74 error publish npm ERR! Please try running this command again as root/Administrator.
+74 error publish
+74 error publish npm ERR! A complete log of this run can be found in:
+74 error publish npm ERR!     C:\Users\adas27\AppData\Roaming\npm-cache\_logs\2018-05-08T08_10_31_425Z-debug.log
+74 error publish
+74 error publish     at Promise.all.then.arr (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:236:11)
+74 error publish     at <anonymous>
+74 error publish     at process._tickCallback (internal/process/next_tick.js:188:7)
+75 error execute callback with error
+76 error Error: Command failed: npm publish --tag latest
+76 error npm ERR! path C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz
+76 error npm ERR! code EPERM
+76 error npm ERR! errno -4048
+76 error npm ERR! syscall unlink
+76 error npm ERR! Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+76 error npm ERR!  { Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+76 error npm ERR!   cause:
+76 error npm ERR!    { Error: EPERM: operation not permitted, unlink 'C:\Users\adas27\AppData\Local\Temp\npm-12976-a7e5e3db\tmp\fromDir-3b29fa7a\package.tgz'
+76 error npm ERR!      errno: -4048,
+76 error npm ERR!      code: 'EPERM',
+76 error npm ERR!      syscall: 'unlink',
+76 error npm ERR!      path: 'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz' },
+76 error npm ERR!   isOperational: true,
+76 error npm ERR!   stack: 'Error: EPERM: operation not permitted, unlink \'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz\'',
+76 error npm ERR!   errno: -4048,
+76 error npm ERR!   code: 'EPERM',
+76 error npm ERR!   syscall: 'unlink',
+76 error npm ERR!   path: 'C:\\Users\\adas27\\AppData\\Local\\Temp\\npm-12976-a7e5e3db\\tmp\\fromDir-3b29fa7a\\package.tgz' }
+76 error npm ERR!
+76 error npm ERR! Please try running this command again as root/Administrator.
+76 error
+76 error npm ERR! A complete log of this run can be found in:
+76 error npm ERR!     C:\Users\adas27\AppData\Roaming\npm-cache\_logs\2018-05-08T08_10_31_425Z-debug.log
+76 error
+76 error     at Promise.all.then.arr (C:\Users\adas27\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:236:11)
+76 error     at <anonymous>
