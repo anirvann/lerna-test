@@ -1,0 +1,11 @@
+{
+  "name": "package-3",
+  "version": "1.0.0",
+  "description": "package 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
